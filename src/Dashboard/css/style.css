@@ -4657,6 +4657,7 @@ span.select2-container.select2-container--default.select2-container--open {
   position: relative;
   display: block;
   padding: 8px 8px 8px 40px;
+  text-align:left;
 }
 
 .sidebar .sidebar-menu>ul>li.submenu ul li a.active {

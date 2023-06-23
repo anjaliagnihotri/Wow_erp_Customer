@@ -20,5 +20,40 @@
   margin-right: -5px;
   margin-left: -5px;
 }
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-radio .radio-button {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ced4da;
+  background-color: #fff;
+  vertical-align: middle;
+  position: relative;
+  margin-left: 50px;
+}
+
+.custom-radio .radio-button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2277d8;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-button:before {
+  opacity: 1;
+}
 
   

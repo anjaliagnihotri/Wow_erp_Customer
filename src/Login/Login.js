@@ -23,10 +23,11 @@ const Login = () => {
     const { email, password } = user;
     if (email && password) {
       try {
-        const res = await axios.post('http://localhost:8009/subAdminLogin', user);
-        console.log(res);
+        const res = await axios.post('http://localhost:8009/customerlogIn', user);
+        console.log(res, 'login response');
         console.log(res.data.result.token);
         localStorage.setItem('user', res.data.result.token);
+        localStorage.setItem('user-data', res.data.result.userValid._id);
         let auth = localStorage.getItem('user');
         if (auth) {
           navigate('/dashb');
